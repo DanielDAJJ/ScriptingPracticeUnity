@@ -9,15 +9,34 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
 
     private Rigidbody2D rb;
-    private bool isGrounded = true;
+    private float moveInput;
+    [SerializeField]private bool isGrounded = true;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //Debug.Log(rb);
     }
 
     void Update()
     {
-        float moveInput = inpu
+        moveInput = Input.GetAxisRaw("Horizontal");
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
+    private void FixedUpdate()
+    {
+        rb.ve
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.contacts[0].normal == Vector2.up)
+        {
+            isGrounded = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
     }
 }
