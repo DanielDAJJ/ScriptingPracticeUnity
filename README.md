@@ -6,7 +6,7 @@ Este repositorio documenta en paralelo el desarrollo de **Echo Terminal**, un vi
 ---
 
 ## 🧠 ¿Qué es *Echo Terminal*?
-
+(Idea provisional)
 > *En un mundo donde los sonidos del pasado vuelven a cobrar vida... solo queda una opción: escuchar, actuar y sobrevivir.*
 
 Echo Terminal es un juego 2D de exploración con toques narrativos, puzzles y una ambientación retrofuturista. El desarrollo de este proyecto forma parte de mi proceso de estudio, experimentación y crecimiento como desarrollador de videojuegos.
