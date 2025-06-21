@@ -52,12 +52,12 @@ Este repo acompaña cada episodio de devlog y se actualiza en sincronía con los
 
 > Proyecto creado por **Daniel Jaimes**  
 > Diseñador gráfico y desarrollador de videojuegos  
-> [[LinkedIn](https://linkedin.com)](https://www.linkedin.com/in/daniel-alejandro-jaimes-jimenez-videojuegos/) · [[Portafolio](https://tuportafolio.com) *(ajusta cuando gustes)*](https://daniel-protafolio-3vd4.vercel.app/)
+> [[LinkedIn](https://linkedin.com)](https://www.linkedin.com/in/daniel-alejandro-jaimes-jimenez-videojuegos/) · [[Portafolio](https://tuportafolio.com)](https://daniel-protafolio-3vd4.vercel.app/)
 
 ---
 
 ## 💬 Feedback
 
-¿Tenés ideas, sugerencias o simplemente querés charlar sobre desarrollo indie?  
-¡Abrí un issue o mandame un comentario en el canal!
+¿Tienes ideas, sugerencias o simplemente querés charlar sobre desarrollo indie?  
+¡Abrí un issue o mandame un comentario en el canal(Próximamente)!
 
