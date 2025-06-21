@@ -2,18 +2,14 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Entity
 {
-    [Header("Variables Movimiento")]
-    [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
-
-    private Rigidbody2D rb;
-    private float moveInput;
     [SerializeField]private bool isGrounded = true;
+    private float moveInput;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     void Update()
@@ -26,7 +22,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.ve
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocityY);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
