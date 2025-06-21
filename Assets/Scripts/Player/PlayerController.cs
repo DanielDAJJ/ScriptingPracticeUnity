@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : Entity
 {
     [SerializeField] private float jumpForce = 10f;
-    [SerializeField]private bool isGrounded = true;
     private float moveInput;
     void Start()
     {
@@ -15,24 +14,26 @@ public class PlayerController : Entity
     void Update()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocityY);
+        HandleMovement(new Vector2(moveInput, 0));
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.contacts[0].normal == Vector2.up)
         {
-            isGrounded = true;
+            IsGrounded = true;
+            Debug.Log($"valor de IsGrounded playercontroller es: {IsGrounded}");
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        isGrounded = false;
+        IsGrounded = false;
+        Debug.Log($"valor de IsGrounded playercontroller es: {IsGrounded}");
     }
 }

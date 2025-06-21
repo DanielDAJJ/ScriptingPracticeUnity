@@ -13,8 +13,8 @@ public class Entity : MonoBehaviour
     protected int currentHealth;
 
     [Header("Public properties")]
-    public bool isGrounded {  get; protected set; }
-    public bool isAlive => currentHealth > 0; 
+    public bool IsGrounded { get; protected set; }
+    public bool IsAlive => currentHealth > 0; 
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +36,7 @@ public class Entity : MonoBehaviour
     }
     protected virtual void HandleMovement(Vector2 direction)
     {
-        if (!isAlive) return;
+        if (!IsAlive) return;
 
         Vector2 velocity = new Vector2(direction.x * moveSpeed, rb.linearVelocityY);
         rb.linearVelocity = velocity;
