@@ -35,7 +35,7 @@ Este repo acompaña cada episodio de devlog y se actualiza en sincronía con los
 - **Figma** – Diseño UI/UX
 - **Visual Studio Code** – Programación y debugging
 - **OBS Studio** – Grabación de pantalla
-- **CapCut** – Edición de video
+- **After Effects** – Edición de video
 - **Notion** – Organización y roadmap del proyecto
 
 ---
