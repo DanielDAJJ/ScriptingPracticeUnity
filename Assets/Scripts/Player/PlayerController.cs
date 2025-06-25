@@ -25,7 +25,7 @@ public class PlayerController : Entity
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.contacts[0].normal == Vector2.up)
+        if (collision.contacts[0].normal.y > 0.5f && collision.collider.CompareTag("Floor"))
         {
             IsGrounded = true;
             Debug.Log($"valor de IsGrounded playercontroller es: {IsGrounded}");
@@ -33,7 +33,10 @@ public class PlayerController : Entity
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        IsGrounded = false;
-        Debug.Log($"valor de IsGrounded playercontroller es: {IsGrounded}");
+        if(collision.collider.CompareTag("Floor"))
+        {
+            IsGrounded = false;
+            Debug.Log($"valor de IsGrounded playercontroller es: {IsGrounded}");
+        }
     }
 }
